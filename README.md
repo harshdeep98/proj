@@ -168,14 +168,14 @@ As the target is a categorical variable, we cannot check correlation with the ot
 corr_funl_df <- dfAnalize %>% binarize(n_bins = 4, thresh_infreq = 0.01)
 ```
 
-### classe__A  
+### clas__A  
 
 ```{r,fig.align="center",fig.width=8,fig.height=10}
 corr_a <- corr_funl_df %>% correlate(target = classe__A) 
 corr_a %>% plot_correlation_funnel(interactive = T,limits = c(-0.5,0.5))
 ```
 
-For *classe__A* it seems that the "Arm and Forearm" sensors are more important.  
+For *clas__A* it seems that the "Arm and Forearm" sensors are more important.  
 
 ```{r, echo=FALSE, eval=FALSE}
 # this section is to find the top features for this classe which are not correlated with others
@@ -188,14 +188,14 @@ temp_a$feature[which(temp_a$feature %in% corr_col)]
 * "gyros_arm_y" is correlated with "gyros_arm_x", so wont consider.
 * So top 5 significant features for "classe__A" are - (magnet_arm_x, pitch_forearm , magnet_dumbbell_y, roll_forearm, gyros_dumbbell_y)  
 
-### classe__B  
+### clas__B  
 
 ```{r,fig.align="center",fig.width=8,fig.height=10}
 corr_b <- corr_funl_df %>% correlate(target = classe__B)
 corr_b %>% plot_correlation_funnel(interactive = T,limits = c(-0.5,0.5))
 ```
 
-For *classe__B* it seems that the "Dumbbell and Belt" sensors are more important.  
+For *clas__B* it seems that the "Dumbbell and Belt" sensors are more important.  
 
 ```{r, echo=FALSE, eval=FALSE}
 # this section is to find the top features for this classe which are not correlated with others
@@ -206,14 +206,14 @@ temp_b$feature[which(temp_b$feature %in% corr_col)]
 
 * So top 5 significant features for "classe__A" are - (magnet_dumbbell_y, magnet_dumbbell_x , roll_dumbbell , magnet_belt_y , accel_dumbbell_x )   
 
-### classe__C  
+### clas__C  
 
 ```{r,fig.align="center",fig.width=8,fig.height=10}
 corr_c <- corr_funl_df %>% correlate(target = classe__C)
 corr_c %>% plot_correlation_funnel(interactive = T,limits = c(-0.5,0.5))
 ```
 
-For *classe__C* it seems that the "Dumbbell" sensors are more important.  
+For *clas__C* it seems that the "Dumbbell" sensors are more important.  
 
 ```{r, echo=FALSE, eval=FALSE}
 # this section is to find the top features for this classe which are not correlated with others
@@ -224,14 +224,14 @@ temp_c$feature[which(temp_c$feature %in% corr_col)]
 
 * So top 5 significant features for "classe__A" are - (magnet_dumbbell_y, roll_dumbbell , accel_dumbbell_y , magnet_dumbbell_x, magnet_dumbbell_z)   
 
-### classe__D  
+### clas__D  
 
 ```{r,fig.align="center",fig.width=8,fig.height=10}
 corr_d <- corr_funl_df %>% correlate(target = classe__D)
 corr_d %>% plot_correlation_funnel(interactive = T,limits = c(-0.5,0.5))
 ```
 
-For *classe__D* it seems that the "Forearm, Arm and Dumbbell" sensors are more important.  
+For *clas__D* it seems that the "Forearm, Arm and Dumbbell" sensors are more important.  
 
 ```{r, echo=FALSE, eval=FALSE}
 # this section is to find the top features for this classe which are not correlated with others
@@ -242,14 +242,14 @@ temp_d$feature[which(temp_d$feature %in% corr_col)]
 
 * So top 5 significant features for "classe__A" are - (pitch_forearm , magnet_arm_y , magnet_forearm_x, accel_dumbbell_y, accel_forearm_x)  
 
-### classe__E  
+### clas__E  
 
 ```{r,fig.align="center",fig.width=8,fig.height=10}
 corr_e <- corr_funl_df %>% correlate(target = classe__E)
 corr_e %>% plot_correlation_funnel(interactive = T,limits = c(-0.5,0.5))
 ```
 
-For *classe__E* it seems that the "Belt" sensors are more important.  
+For *clas__E* it seems that the "Belt" sensors are more important.  
 
 ```{r, echo=FALSE, eval=FALSE}
 # this section is to find the top features for this classe which are not correlated with others
